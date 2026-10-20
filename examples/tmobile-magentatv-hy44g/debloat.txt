@@ -28,3 +28,4 @@ com.wbd.stream                           # Max
 com.canal.android.canal                  # Canal+
 pl.tvn.player.tv                         # Player (TVN)
 com.elevensportsnetwork.elevenpoland     # Eleven Sports
+com.davincikids.tv                       # DaVinci Kids (preloaded on some units)
