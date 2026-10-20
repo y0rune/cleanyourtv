@@ -1,0 +1,30 @@
+# T-Mobile Poland MagentaTV box (Skyworth Digital HY44G, build MagentaRozrywka/HY4402-DT-P, Amlogic)
+# Android TV 12 (SDK 31), build STTC.230104.002.C4.3.3_20251010
+#
+# Apply:   TV_HOST=<ip> tools/disable.sh examples/tmobile-magentatv-hy44g/debloat.txt
+# Undo:    TV_HOST=<ip> tools/restore.sh examples/tmobile-magentatv-hy44g/debloat.txt com.telekom.onetv.tv.pl
+# Everything is DISABLED, not uninstalled. Comment out any line you want to keep.
+#
+# The home screen is the MagentaTV app itself (com.telekom.onetv.tv.pl); it also plays live TV. Keep it.
+#
+# Kept on purpose: MagentaTV (com.telekom.onetv.tv.pl), pt.tech4home.aidlapp (remote service),
+# com.sdt.dt.pl.rcupair (remote pairing), com.droidlogic.* (Amlogic vendor, Bluetooth remote),
+# com.sdt.dt.platform.keyboard, com.sdt.frontpanelledsservice, com.sdt.customization (setup screens),
+# Play Store / Play Services, TvProvider.
+
+# Google: recommendations, attribution, feedback, preloads
+com.google.android.tvrecommendations     # recommendation rows
+com.google.android.partnersetup          # partner attribution
+com.google.android.feedback              # feedback reporter
+com.google.android.play.games            # preloaded Play Games
+
+# Operator and vendor telemetry
+com.tataelxsi.icx                        # Tata Elxsi remote monitoring: TelemetryService -> AWS Kinesis, READ_LOGS
+com.sdt.dt.dms.server                    # Skyworth device management service, boot-started, READ_LOGS + usage stats
+
+# Preloaded streaming apps (keep the ones you use; this user kept Netflix, YouTube, Prime Video, Apple TV)
+com.google.android.youtube.tvmusic       # YouTube Music
+com.wbd.stream                           # Max
+com.canal.android.canal                  # Canal+
+pl.tvn.player.tv                         # Player (TVN)
+com.elevensportsnetwork.elevenpoland     # Eleven Sports
