@@ -17,6 +17,9 @@ com.google.android.tvrecommendations     # recommendation rows
 com.google.android.partnersetup          # partner attribution
 com.google.android.feedback              # feedback reporter
 com.google.android.play.games            # preloaded Play Games
+com.google.android.backdrop              # Ambient photo screensaver; point the screensaver at the launcher first:
+#   tools/tv.py "settings put secure screensaver_components com.gathin.tvhome/.ClockDream"
+#   (restore: com.google.android.backdrop/com.google.android.backdrop.Backdrop)
 
 # Operator and vendor telemetry
 com.tataelxsi.icx                        # Tata Elxsi remote monitoring: TelemetryService -> AWS Kinesis, READ_LOGS
