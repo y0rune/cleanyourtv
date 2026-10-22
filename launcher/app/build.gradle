@@ -11,7 +11,8 @@ android {
         applicationId providers.gradleProperty('launcherApplicationId').getOrElse('com.gathin.tvhome')
         minSdk 26
         targetSdk 34
-        versionCode 7
+        // This box ran self-update builds up to 1009; Android refuses to install a lower versionCode over them.
+        versionCode 1010
         versionName '2.6'
     }
 
