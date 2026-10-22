@@ -19,6 +19,7 @@
     <string-array name="dock_apps">
         <item>com.telekom.onetv.tv.pl</item>
         <item>app.siptv.android</item>
+        <item>io.github.y0rune.tv</item>
         <item>com.netflix.ninja</item>
         <item>com.apple.atve.androidtv.appletv</item>
         <item>org.jellyfin.androidtv</item>
@@ -65,6 +66,7 @@
     <!-- A tile's name instead of the app's own: "package=Name". It also shows above the dock. -->
     <string-array name="app_labels">
         <item>com.telekom.onetv.tv.pl=TV</item>
+        <item>io.github.y0rune.tv=TV Guide</item>
     </string-array>
     <!-- A tile's artwork instead of the app's banner: "package=drawable", a banner_* drawable bundled with the
          launcher (res/drawable). banner_tv is a magenta field with the Live TV glyph. -->
