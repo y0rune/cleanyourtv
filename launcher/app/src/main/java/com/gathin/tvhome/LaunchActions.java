@@ -41,6 +41,8 @@ final class LaunchActions {
     static Intent intent(String pkg, String value) {
         String uri = viewUri(value);
         Intent i = uri != null ? new Intent(Intent.ACTION_VIEW, Uri.parse(uri)) : new Intent(value);
-        return i.setPackage(pkg);
+        // CLEAR_TOP: when the screen is already in the app's task under another one (MagentaTV's guide under its
+        // player), Android only fronts the task; this brings the screen itself back on top.
+        return i.setPackage(pkg).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
     }
 }
